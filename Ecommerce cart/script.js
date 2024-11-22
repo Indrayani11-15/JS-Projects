@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   const cartTotalMessage = document.getElementById("cart-total")
   const totalPriceDisplay = document.getElementById("total-price")
   const checkOutBtn = document.getElementById("checkout-btn")
+  const removeButton = document.getElementById("remove-btn")
 
   products.forEach(product => {
     const productDiv = document.createElement('div')
@@ -48,7 +49,8 @@ document.addEventListener('DOMContentLoaded',()=>{
           totalPrice += item.price
          const cartItem = document.createElement('div')
          cartItem.innerHTML = `
-         ${item.name} - $${item.price.toFixed(2)}`
+         ${item.name} - $${item.price.toFixed(2)}
+         <button id ='remove-btn'>Remove</button>`
          cartItems.appendChild(cartItem)
 
          totalPriceDisplay.textContent = `${totalPrice.toFixed(2)}`
@@ -64,5 +66,9 @@ document.addEventListener('DOMContentLoaded',()=>{
     cart.length = 0
     alert("Checkout successfully!!")
     renderCart()
+  })
+
+  removeButton.addEventListener('click',()=>{
+    
   })
 });

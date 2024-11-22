@@ -64,6 +64,20 @@ h2 {
   text-align: right;
 }
 
+#remove-btn{
+  background-color: #6200ea;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#remove-btn:hover {
+  background-color: #3700b3;
+}
+
 #checkout-btn {
   background-color: #6200ea;
   border: none;
